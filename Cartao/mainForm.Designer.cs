@@ -32,6 +32,7 @@
             this.bImport = new System.Windows.Forms.Button();
             this.lImport2 = new System.Windows.Forms.Label();
             this.bImportPic = new System.Windows.Forms.Button();
+            this.ofdCSV = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // lImport
@@ -72,6 +73,10 @@
             this.bImportPic.UseVisualStyleBackColor = true;
             this.bImportPic.Click += new System.EventHandler(this.bImportPic_Click);
             // 
+            // ofdCSV
+            // 
+            this.ofdCSV.FileOk += new System.ComponentModel.CancelEventHandler(this.ofdCSV_FileOk);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -94,5 +99,6 @@
         private System.Windows.Forms.Button bImport;
         private System.Windows.Forms.Label lImport2;
         private System.Windows.Forms.Button bImportPic;
+        private System.Windows.Forms.OpenFileDialog ofdCSV;
     }
 }

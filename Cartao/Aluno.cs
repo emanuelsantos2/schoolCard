@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Cartao
 {
-    struct AlunoData
+    public struct AlunoData
     {
-        string name;
-        string stdClass;
-        string numero;
+        public string name;
+        public string stdClass;
+        public string numero;
     }
 }
