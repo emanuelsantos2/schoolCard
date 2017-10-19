@@ -28,10 +28,10 @@ namespace Cartao
             //foreach (Aluno aluno in alunos)
             //{
 
-            Application.Run(new Form1(alunos[0]));
+            //Application.Run(new Form1(alunos[0]));
             //}
 
-            //Application.Run(new mainForm());
+            Application.Run(new mainForm());
         }
     }
     public class Aluno
