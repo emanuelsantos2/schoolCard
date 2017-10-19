@@ -8,14 +8,10 @@ using System.Drawing;
 
 namespace Cartao
 {
-    class ImageProcessing
+    static class ImageProcessing
     {
 
-    public ImageProcessing() {
-
-    }
-
-        public Bitmap Screenshot(Form form)
+        public static Bitmap Screenshot(Form form)
         {
             Graphics myGraphics = form.CreateGraphics();
             Size s = form.Size;
