@@ -24,12 +24,14 @@ namespace Cartao
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Application.Run(new Form1());
-            
-            foreach (Aluno aluno in alunos)
-            {
-                
-                Application.Run(new Form1(aluno));
-            }
+
+            //foreach (Aluno aluno in alunos)
+            //{
+
+            //Application.Run(new Form1(aluno));
+            //}
+
+            Application.Run(new mainForm());
         }
     }
     public class Aluno
