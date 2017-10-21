@@ -11,5 +11,6 @@ namespace Cartao
         public string name;
         public string stdClass;
         public string numero;
+        public string processId;
     }
 }

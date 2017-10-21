@@ -14,6 +14,7 @@ namespace Cartao
     public partial class mainForm : Form
     {
         List<AlunoData> alunos;
+        
         public mainForm()
         {
             InitializeComponent();
@@ -27,7 +28,12 @@ namespace Cartao
 
         private void bImportPic_Click(object sender, EventArgs e)
         {
-
+            ofdBCK.Filter = "JPG|*.jpg";
+            ofdBCK.ShowDialog();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1.ShowDialog();
         }
 
         private void ofdCSV_FileOk(object sender, CancelEventArgs e)
@@ -40,8 +46,20 @@ namespace Cartao
                 aluno.name = line.Split(';')[0];
                 aluno.numero = line.Split(';')[1];
                 aluno.stdClass = line.Split(';')[2];
+                aluno.processId = line.Split(';')[3];
                 alunos.Add(aluno);
             }
         }
+
+        private void genButton_Click(object sender, EventArgs e)
+        {
+            Bitmap background = new Bitmap(ofdBCK.FileName);
+            foreach (AlunoData aluno in alunos)
+            {
+                Form1 forms = new Form1(aluno, background, folderBrowserDialog1.SelectedPath);
+                forms.Show();
+            }
+        }
+
     }
 }
