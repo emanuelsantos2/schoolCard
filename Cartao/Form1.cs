@@ -23,6 +23,7 @@ namespace Cartao
             label1.Text = aluno.name;
             label2.Text = aluno.stdClass;
             stdNrLabel.Text = aluno.numero;
+            this.Size = new Size(500,300);
             try
             {
                 pictureBox1.Image = Image.FromFile(photoPath(aluno.processId, photoFolder));

@@ -18,6 +18,7 @@ namespace Cartao
         public mainForm()
         {
             InitializeComponent();
+            PdfGeneration.GeneratePDF("ok.pdf", "C:\\Users\\ffelicissimo\\Source\\Repos\\schoolCard\\Cartao\\bin\\Debug\\TGPS\\");
         }
 
         private void bImport_Click(object sender, EventArgs e)
